@@ -8,3 +8,5 @@ NOTES:
 @ uploaded machine_learning code in both .ipynb and .py can use any which you like
 @ data1 is the dataset. Change the address of Dataset in python code .
 @ also change address of css file in html file.
+
+To run the code .  run app.py file using terminal
