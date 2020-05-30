@@ -1,0 +1,44 @@
+h1
+{
+	color: black;
+	background-color: linen ;
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+}
+body
+{
+	background-color: #3CBC8D;
+}
+select {
+  
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+
+button[type=submit]
+{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+input[type=text]:focus {
+  background-color: LIGHTBLUE;
+  }
+
+ input[type=text] {
+
+  
+  padding: 10px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #555;
+  outline: none;
+}
+
