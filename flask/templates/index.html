@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet"  href="{{ url_for('static',filename='style.css') }}">
+	
+	<meta charset="UTF-8">
+	<title> ML Project</title>
+</head>
+<body>
+
+<h1> CAR PERFORMANCE PREDICTION</h1>
+<div class="login">
+	
+	<form action="{{url_for('predictmpl')}}"method = "post">
+		<h2>Mileage Prediction : </h2><br>
+		<select id="fuel" name="Fuel" placeholder = "Fuel">
+			<option value="Petrol">Petrol</option>
+            <option value="Premium">Premium</option>
+    		<option value="electric">electric</option>
+    		<option value="diesel">diesel</option>
+		</select>
+		<input type = "text" name ="cylinder" placeholder="Number of Cylinders" required = "required"/>
+		<input type = "text" name ="horsepower" placeholder="Horse Power" required = "required"/>
+		
+		<button type = "submit" class = "btn btn-primary btn-block btn-large">Prediction</button>
+	</form>
+	<br>
+	<br>
+	{{Mileage}}
+</div>
+
+<div class="login2">
+	
+	<form action="{{url_for('predicthp')}}"method = "post">
+		<h2>HorsePower Prediction : </h2><br>
+		<select id="fuel" name="Fuel" placeholder = "Fuel">
+			<option value="Petrol">Petrol</option>
+            <option value="Premium">Premium</option>
+    		<option value="electric">electric</option>
+    		<option value="diesel">diesel</option>
+		</select>
+		<input type = "text" name ="cylinder" placeholder="Number of Cylinders" required = "required"/>
+		<input type = "text" name ="Mileage" placeholder="Mileage" required = "required"/>
+		
+		<button type = "submit" class = "btn btn-primary btn-block btn-large">Prediction</button>
+	</form>
+	<br>
+	<br>
+	{{Horsepower}}
+</div>
+<div class="login3">
+	
+	<form action="{{url_for('predictprice')}}"method = "post">
+		<h2>Price Prediction : </h2><br>
+		<select id="fuel" name="Fuel" placeholder = "Fuel">
+			<option value="Petrol">Petrol</option>
+            <option value="Premium">Premium</option>
+    		<option value="electric">electric</option>
+    		<option value="diesel">diesel</option>
+		</select>
+		<input type = "text" name ="cylinder" placeholder="Number of Cylinders" required = "required"/>
+		<input type = "text" name ="horsepower" placeholder="Horse Power" required = "required"/>
+		<select id="driving" name = "driving">
+            <option value="AUTOMATIC">AUTOMATIC transmission</option>
+			<option value="MANUAL">MANUAL transmission</option>
+			<option value="AUTOMATED_MANUAL">AUTOMATED_MANUAL transmission</option>
+			<option value="DIRECT_DRIVE">DIRECT_DRIVE</option>	
+		</select>
+		<select id = "transmission" name = "transmission">
+			<option value="front wheel drive">front wheel drive</option>
+			<option value="rear wheel drive">rear wheel drive</option>
+			<option value="all wheel drive">all wheel drive</option>
+			<option value="four wheel drive">four wheel drive</option>
+		</select>
+		
+		<button type = "submit" class = "btn btn-primary btn-block btn-large">Prediction</button>
+	</form>
+	<br>
+	<br>
+	{{Price}}
+</div>
+</body>
+</html>
